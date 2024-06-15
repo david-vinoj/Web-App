@@ -1,0 +1,36 @@
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+    <a href='{{ path('home') }}' class="active item">Accueil</a>
+    <a class="item">Boutique</a>
+    <a class="item">Règles</a>
+    <a href='http://forum.cana-rp.fr' class="item">Forum</a>
+    <a href='{{ path('authentication') }}' class="item">Connexion</a>
+    <a href='{{ path('signup') }}' class="item">Inscription</a>
+</div>
+
+<!-- Page Contents -->
+<div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing menu no-border">
+                <a class="toc item">
+                    <i class="sidebar icon"></i>
+                </a>
+                <a href='{{ path('home') }}' class="active item">Accueil</a>
+                <a class="item">Boutique</a>
+                <a class="item">Règles</a>
+                <a href='http://forum.cana-rp.fr' class="item">Forum</a>
+                {% if isLogged() %}
+                    <div class="right item">
+                        <a href="{{ path('user-profile') }}" class="inverted"> Bonjour {{ getUsername() }} </a> &nbsp; &nbsp;&nbsp;&nbsp;
+                        <a href="{{ path('disconnect') }}" > - &nbsp;&nbsp;&nbsp; Déconnexion </a>
+                    </div>
+                {% else %}
+                    <div class="right item  mobile hidden">
+                        <a href='{{ path('authentication') }}' class="ui inverted button">Connexion</a>
+                        <a href='{{ path('signup') }}' class="ui orange inverted button">Inscription</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>

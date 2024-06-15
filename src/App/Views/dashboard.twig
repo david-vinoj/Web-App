@@ -1,0 +1,57 @@
+{% extends '_Shared/layout.twig' %}
+
+{% block body %}
+    <div class="ui inverted vertical medium-banner center aligned segment"
+    style="background-image:url('img/dashboard_background.jpg');">
+        <img src="{{ asset('img/example.png') }}" class="ui medium circular image player-photo" alt="photo">
+
+        <div class="ui container">
+            <h1 class="player-details">{{ getUsername() }}</h1>
+            <p class="player-details">
+                Citoyen de 22 ans à <i>Los Santos</i>
+            </p>
+        </div>
+
+    </div>
+    <div class="ui container">
+    <div class="ui grid">
+             <div class="nine wide column">
+                 <br>
+                 <i>
+                     <h1>Biographie</h1>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i>
+
+             </div>
+             <div class="seven wide column ">
+                <br> <br> <br>
+                 <button class="ui right labeled dashboard-action icon button">
+                     <i class="camera icon"></i>
+                     Editer photo de profil
+                 </button> <br> <br>
+
+                 <button class="ui right labeled icon dashboard-action green button">
+                     <i class="write icon"></i>
+                     Editer biographie
+                 </button> <br> <br>
+
+                 <button class="ui right labeled dashboard-action red icon button">
+                     <i class="comment icon"></i>
+                    Contacter un modérateur
+                 </button> <br> <br>
+            </div>
+        <div class="ui sixteen wide column">
+            <hr>
+            <br>
+            <h1 class="ui center aligned grid">Casier judiciciaire</h1>
+            <div class="ui center aligned grid casier-judiciare">
+                <h2 style="color:#4c8021;">Votre casier judiciare est vierge.</h2>
+            </div>
+
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends '_Shared/layout-home.twig' %}
+
+{% block body %}
+            <div class="ui text container">
+                <h1 class="ui inverted header"> Bienvenue sur Cana </h1>
+                <h2>Serveur roleplay pour Grand Theft Auto V</h2> <br>
+                <a target='_blank' href="https://discord.gg/QYCVPpR">
+                    <div class="ui huge green button">Rejoindre notre communauté</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="ui vertical stripe segment">
+            <div class="ui middle aligned stackable grid container">
+                <div class="row">
+                    <div class="eight wide column">
+                        <h3 class="ui header">L'expérience Cana désormais sur GTA</h3>
+                        <p>Cana est une communauté roleplay qui s'est forgée une solide réputation depuis ses dernières années. Jouez parmis une communauté soudée et fidèle au roleplay.</p>
+
+                        <h3 class="ui header">Whitelist ouverte</h3>
+                        <p>Afin de profiter d'une meilleure expérience, notre serveur dispose d'une whitelist, qui est actuellement ouverte aux inscriptions.</p>
+
+                        <h3 class="ui header">Serveur en développement</h3>
+                        <p>Le serveur est actuellement en cours de développement, nous y intégrons de nouvelles extensions. Merci de votre compréhension.</p>
+                    </div>
+                    <div class="six wide right floated column">
+                        <img src="https://s-media-cache-ak0.pinimg.com/originals/ff/09/9e/ff099e42b1bc472a9dd531b228bbd903.jpg" class="ui large bordered rounded image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        $('.masthead').visibility({once: false})
+        $('.ui.sidebar').sidebar('attach events', '.toc.item')
+      })
+    </script>
+
+{% endblock %}
